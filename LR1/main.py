@@ -1,36 +1,12 @@
-
-
-'''
-# Функция, которую будем тестировать
-def add(a, b):
-    return a + b
-
-# Тесты
-class TestMath(unittest.TestCase):
-    def test_add_positive(self):
-        self.assertEqual(add(2, 3), 5)
-
-    def test_add_negative(self):
-        self.assertEqual(add(-1, -3), -4)
-
-    def test_add_zero(self):
-        self.assertEqual(add(0, 5), 5)
-
-# Запуск тестов
-unittest.main(argv=[''], verbosity=2, exit=False)
-
-'''
-
-
-# def f(nums, target):
-
 nums = [1, 6, -1]
-target = 5
+target = 300
 
-def two_sum(nums,target):
+
+def two_sum(nums, target):
+  
   # Проверяем является ли список значением класса NoneType
   if nums == None:
-    return 'Список является NoneType'
+    return 'Список является значением класса NoneType'
   
   # Проверяем, что список является списком, а его значения - целые числа
   if type(nums) == list:
@@ -43,6 +19,14 @@ def two_sum(nums,target):
   if nums == []:
     return 'На вход подан пустой список'
   
+  # Проверяем, является ли target None
+  if target == None:
+    return 'Переменна target является значением класса NoneType'
+  
+  # Проверяем, является ли target целым числом
+  if type(target) != int:
+    return 'Переменна target не является целым числовым значением'
+  
   
   
   # Сама функция
@@ -50,5 +34,8 @@ def two_sum(nums,target):
       for j in range(i+1, len(nums)):
           if (nums[i]+nums[j]) == target:
             return [i,j] # возвращаем самые первые найденные индексы
+  
+  # Если не получается составить target
+  return 'Не найдены требуемые комбинации чисел в списке'
           
 print(two_sum(nums, target))
