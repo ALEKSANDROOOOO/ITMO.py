@@ -17,16 +17,16 @@ def main() -> None:
 
     
     # Основные переменные
-    root = 12
-    height = 4
+    root = 15
+    height = 6
 
     # tree - двумерный массив, для красивого вывода дерева
     tree = [[] for i in range(height+1)]
     tree[0] = [str(root)]
     
     # ввод формул правой и левой ветки
-    l_b = lambda x : 4*(x+1)
-    r_b = lambda x : 5*(x-1)
+    l_b = lambda x : 2*(x+1)
+    r_b = lambda x : 2*(x-1)
     
     print(gen_bin_tree(height, root))
     # раскомментировать следующую строчку и закомментировать данную, а также в gen_bin_tree return изменить на tree для того, чтобы увидеть красивый вывод
@@ -34,6 +34,12 @@ def main() -> None:
 
     
 def left_branch(root: int) -> int:
+    """
+    Функция возвращает стандартный вывод, если мы не меняли формулы задачи корня
+    В противном случае в функцию get_left_branch() передается значение новой формулы корня
+    """
+
+
     global l_b, r_b
 
     if l_b(3)==8 and r_b(3)==4:
@@ -42,6 +48,12 @@ def left_branch(root: int) -> int:
         return l_b(root)
 
 def right_branch(root: int) -> int:
+    """
+    Функция возвращает стандартный вывод, если мы не меняли формулы задачи корня
+    В противном случае в функцию get_right_branch() передается значение новой формулы корня
+    """
+
+
     global l_b, r_b
 
     if l_b(3)==8 and r_b(3)==4:
@@ -78,6 +90,7 @@ def gen_bin_tree(height: int = 6 , root: int = 15, h: int = 1) -> dict[int:int] 
 def get_left_branch(height: int, root: int, h: int, flag: bool = False) -> Callable[[int, int, int], dict[int:dict[int: int]] | list[list[str]]]:
     """
     Генерирует левую ветку дерева.
+    Возвращается рекурсивная ф-ция gen_bin_tree, в процессе которой создается дерево
     """
 
     # блок кода для красивого вывода при flag = true, иначе - стандартное выполнение
@@ -91,6 +104,7 @@ def get_left_branch(height: int, root: int, h: int, flag: bool = False) -> Calla
 def get_right_branch(height: int, root: int, h: int, flag: bool = False) -> Callable[[int, int, int], dict[int:dict[int: int]] | list[list[str]]]:
     """
     Генерирует правую ветку дерева.
+    Возвращается рекурсивная ф-ция gen_bin_tree, в процессе которой создается дерево
     """
 
     # блок кода для красивого вывода при flag = true, иначе - стандартное выполнение
