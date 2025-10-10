@@ -1,8 +1,6 @@
 from typing import Callable 
 
 
-
-
 # Уникальное дерево №15 - Root = 15; height = 6, left_leaf = 2*(root+1), right_leaf = 2*(root-1)
 def main() -> None:
     """
@@ -19,24 +17,20 @@ def main() -> None:
 
     
     # Основные переменные
-    root = 15
-    height = 6
+    root = 12
+    height = 4
 
     # tree - двумерный массив, для красивого вывода дерева
     tree = [[] for i in range(height+1)]
     tree[0] = [str(root)]
     
     # ввод формул правой и левой ветки
-    l_b = lambda x : 2*(x+1)
-    r_b = lambda x : 2*(x-1)
+    l_b = lambda x : 4*(x+1)
+    r_b = lambda x : 5*(x-1)
     
     print(gen_bin_tree(height, root))
     # раскомментировать следующую строчку и закомментировать данную, а также в gen_bin_tree return изменить на tree для того, чтобы увидеть красивый вывод
     #output_bin_tree(gen_bin_tree(height,root), spaces=90)
-    
-    
-    
-    
 
     
 def left_branch(root: int) -> int:
