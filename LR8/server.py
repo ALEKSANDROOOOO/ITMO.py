@@ -317,8 +317,9 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
 
         if path == '/currencies':
             return {
-                'app_name': "Курсы валют",
+                'app_name': "Актуальный курс валют",
                 'navigation': self.get_navigation("/currencies"),
+                'date': datetime.now().strftime("%Y-%m-%d"),
                 'currencies': [
                     {'code': c, 'name': info['name'], 'rate': info['rate'], 'date': info['date']}
                     for c, info in currency_rates.items()
