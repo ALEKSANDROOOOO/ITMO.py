@@ -14,7 +14,7 @@
 8. **[LR8 - Клиент-серверное приложение на Python с использованием Jinja2](LR8/)** - создание сайта для отслеживания финансовых показателей с API ЦБ РФ посредством соединения Python-кода с фронтенд разработкой с помощью шаблонизатора Jinja2
 9. **[LR9 - Сравнение LR3 и LR5. timeit](L93/)** - CRUD для приложения отслеживания курса валют с SQLite базой данных (продолжение работы над ЛР8)
 10. **[LR10 - Асинхронное программирование](LR10/)** - сравнение эффективности потоков и процессов, работа с pytest, doctest
-11. **[Проектная работа](https://github.com/KirillPetukhov1/python_1sem_hakaton/blob/main/.gitignore)**. Название команды "Drop DATABAS". Полноценное клиент-серверное веб-приложение на Python с использованием Flask и ORM SQLAlchemy, SQLite, GitLab Flow и элементы CSS, JS (функционал сайта)
+11. **[Проектная работа](https://github.com/KirillPetukhov1/python_1sem_hakaton/blob/main/)**. Название команды "Drop DATABAS". Полноценное клиент-серверное веб-приложение на Python с использованием Flask и ORM SQLAlchemy, SQLite, GitLab Flow и элементы CSS, JS (функционал сайта)
    
 ## Ссылки для сдачи
 - LR1: `https://github.com/ALEKSANDROOOOO/ITMO.py/tree/main/LR1`
@@ -27,4 +27,4 @@
 - LR8: `https://github.com/ALEKSANDROOOOO/ITMO.py/tree/main/LR8`
 - LR9: `https://github.com/ALEKSANDROOOOO/ITMO.py/tree/main/LR9`
 - LR10: `https://github.com/ALEKSANDROOOOO/ITMO.py/tree/main/LR10`
-- LR11: `https://github.com/KirillPetukhov1/python_1sem_hakaton/blob/main/.gitignore`
+- LR11: `https://github.com/KirillPetukhov1/python_1sem_hakaton/blob/main/`
